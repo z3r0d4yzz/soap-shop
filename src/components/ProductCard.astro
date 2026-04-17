@@ -12,7 +12,8 @@ const { id, name, price, description, image = "", twintLink = "#" } = Astro.prop
 ---
 
 <article class="rounded-3xl border border-stone-200 bg-white p-6 shadow-sm">
-  <a href={`/produkte/${id}`} class="block">
+  <a href={`${import.meta.env.BASE_URL}produkte/${id}`} class="block">
+
     {
       image ? (
         <img
@@ -32,7 +33,7 @@ const { id, name, price, description, image = "", twintLink = "#" } = Astro.prop
 
   <div class="mt-4 flex gap-3">
     <a
-      href={`/produkte/${id}`}
+      href={`${import.meta.env.BASE_URL}produkte/${id}`}
       class="inline-block rounded-full border border-stone-300 px-5 py-3"
     >
       Details
