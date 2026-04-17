@@ -1,11 +1,10 @@
-// @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
+import tailwind from "@tailwindcss/vite";
 
-import tailwindcss from '@tailwindcss/vite';
-
-// https://astro.build/config
 export default defineConfig({
+  site: "https://z3r0d4yzz.github.io",
+  base: "/soap-shop",
   vite: {
-    plugins: [tailwindcss()]
-  }
+    plugins: [tailwind()],
+  },
 });
