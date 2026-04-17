@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProductCard from "../components/ProductCard.astro";
+import { products } from "../data/products";
+---
+
+<BaseLayout title="Shop | Seifen Shop Vorlage">
+  <section class="mx-auto max-w-6xl px-6 py-16">
+    <h1 class="text-4xl font-semibold">Shop</h1>
+    <p class="mt-4 max-w-2xl text-stone-600">
+      Hier werden spaeter die Produkte des Kunden angezeigt.
+    </p>
+
+    <div class="mt-10 grid gap-6 md:grid-cols-3">
+      {products.map((product) => (
+        <ProductCard
+          id={product.id}
+          name={product.name}
+          price={product.price}
+          description={product.description}
+          image={product.image}
+          twintLink={product.twintLink}
+        />
+      ))}
+    </div>
+  </section>
+</BaseLayout>

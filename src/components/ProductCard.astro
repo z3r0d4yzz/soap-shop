@@ -1,0 +1,48 @@
+---
+interface Props {
+  id: string;
+  name: string;
+  price: string;
+  description: string;
+  image?: string;
+  twintLink?: string;
+}
+
+const { id, name, price, description, image = "", twintLink = "#" } = Astro.props;
+---
+
+<article class="rounded-3xl border border-stone-200 bg-white p-6 shadow-sm">
+  <a href={`/produkte/${id}`} class="block">
+    {
+      image ? (
+        <img
+          src={image}
+          alt={name}
+          class="mb-4 aspect-square w-full rounded-2xl object-cover"
+        />
+      ) : (
+        <div class="mb-4 aspect-square rounded-2xl bg-stone-200"></div>
+      )
+    }
+
+    <h2 class="text-xl font-semibold">{name}</h2>
+    <p class="mt-2 text-stone-600">{description}</p>
+    <p class="mt-4 font-medium">{price}</p>
+  </a>
+
+  <div class="mt-4 flex gap-3">
+    <a
+      href={`/produkte/${id}`}
+      class="inline-block rounded-full border border-stone-300 px-5 py-3"
+    >
+      Details
+    </a>
+
+    <a
+      href={twintLink}
+      class="inline-block rounded-full bg-stone-900 px-5 py-3 text-white"
+    >
+      TWINT
+    </a>
+  </div>
+</article>

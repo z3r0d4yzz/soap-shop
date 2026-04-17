@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProductCard from "../components/ProductCard.astro";
+import { products } from "../data/products";
+---
+
+<BaseLayout title="Seifen Shop Vorlage">
+  <section class="mx-auto max-w-6xl px-6 py-20">
+    <p class="mb-4 text-sm uppercase tracking-[0.2em] text-stone-500">
+      Platzhalter fuer Markenname
+    </p>
+
+    <h1 class="max-w-3xl text-5xl font-semibold leading-tight">
+      Handgemachte Seife mit natuerlichen Inhaltsstoffen
+    </h1>
+
+    <p class="mt-6 max-w-2xl text-lg text-stone-600">
+      Dies ist eine erste Website-Vorlage. Der Kunde kann spaeter Markenname,
+      Produkte, Bilder, Texte und TWINT-Links nachliefern.
+    </p>
+
+    <div class="mt-8 flex gap-4">
+      <a
+        href="/shop"
+        class="rounded-full bg-stone-900 px-6 py-3 text-white"
+      >
+        Zum Shop
+      </a>
+
+      <a
+        href="/kontakt"
+        class="rounded-full border border-stone-300 px-6 py-3"
+      >
+        Kontakt
+      </a>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-6 pb-20">
+    <h2 class="mb-8 text-3xl font-semibold">Beispielprodukte</h2>
+
+    <div class="grid gap-6 md:grid-cols-3">
+      {products.slice(0, 3).map((product) => (
+        <ProductCard
+          id={product.id}
+          name={product.name}
+          price={product.price}
+          description={product.description}
+          image={product.image}
+          twintLink={product.twintLink}
+        />
+      ))}
+    </div>
+  </section>
+</BaseLayout>
