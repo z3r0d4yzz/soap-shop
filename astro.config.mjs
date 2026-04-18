@@ -4,6 +4,7 @@ import tailwind from "@tailwindcss/vite";
 export default defineConfig({
   site: "https://z3r0d4yzz.github.io",
   base: "/soap-shop",
+  trailingSlash: "always",
   vite: {
     plugins: [tailwind()],
   },
