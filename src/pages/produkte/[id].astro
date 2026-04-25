@@ -10,6 +10,8 @@ export function getStaticPaths() {
 }
 
 const { product } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+const imageUrl = product.image ? `${base}/${product.image}` : "";
 ---
 
 <BaseLayout title={`${product.name} | Seifen Shop Vorlage`}>
@@ -19,9 +21,9 @@ const { product } = Astro.props;
     <div class="mt-8 grid gap-10 md:grid-cols-2">
       <div>
         {
-          product.image ? (
+          imageUrl ? (
             <img
-              src={product.image}
+              src={imageUrl}
               alt={product.name}
               class="aspect-square w-full rounded-3xl object-cover"
             />

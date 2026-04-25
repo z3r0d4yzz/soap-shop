@@ -6,7 +6,7 @@ export const products = [
     description: "Sanfte Platzhalterbeschreibung fuer das Produkt.",
     longDescription:
       "Dies ist eine ausfuehrlichere Platzhalterbeschreibung fuer die Lavendel Seife. Spaeter koennen hier Wirkung, Duft, Herstellung und Inhaltsstoffe stehen.",
-    image: "",
+    image: "/images/products/1.png",
     twintLink: "#",
   },
   {
@@ -16,7 +16,7 @@ export const products = [
     description: "Frische Platzhalterbeschreibung fuer das Produkt.",
     longDescription:
       "Dies ist eine ausfuehrlichere Platzhalterbeschreibung fuer die Zitronen Seife. Spaeter koennen hier Wirkung, Duft, Herstellung und Inhaltsstoffe stehen.",
-    image: "",
+    image: "/images/products/2.jpg",
     twintLink: "#",
   },
   {
@@ -26,7 +26,7 @@ export const products = [
     description: "Milde Platzhalterbeschreibung fuer empfindliche Haut.",
     longDescription:
       "Dies ist eine ausfuehrlichere Platzhalterbeschreibung fuer die Sensitive Seife. Spaeter koennen hier Wirkung, Duft, Herstellung und Inhaltsstoffe stehen.",
-    image: "",
+    image: "/images/products/3.jpeg",
     twintLink: "#",
   },
 ];
