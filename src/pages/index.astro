@@ -8,13 +8,13 @@ import { products } from "../data/products";
   
   <section class="mx-auto max-w-6xl px-6 py-20">
      <img
-    src={`${import.meta.env.BASE_URL}/images/happysoap.jpg`}
+    src={`${import.meta.env.BASE_URL}/happysoap.jpg`}
     alt="Happy Soap Logo"
     class="mb-16 h-36 w-auto"
     />
     
     <p class="mb-4 text-sm uppercase tracking-[0.2em] text-stone-500">
-      Platzhalter fuer Markenname
+      Happy Soap
     </p>
 
     <h1 class="max-w-3xl text-5xl font-semibold leading-tight">
@@ -51,10 +51,10 @@ import { products } from "../data/products";
         <ProductCard
           id={product.id}
           name={product.name}
-          price={product.price}
+          priceCents={product.priceCents}
           description={product.description}
           image={product.image}
-          twintLink={product.twintLink}
+          
         />
       ))}
     </div>
